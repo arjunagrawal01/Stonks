@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>STONKS</title>
+
+<style>
+    header{
+        padding: px;
+        font-size: 30px;
+        Color: white;
+    }
+
+    h2{
+        
+        padding: px;
+        text-align:center;
+        font-size: 16px;
+        Color: white;
+    }
+
+    h3{
+        
+        padding: px;
+        text-align: left;
+        font-size: 25px;
+        Color: white;
+    }
+
+        
+    .white{
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    .black{
+        color:black;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    body{
+        background-color: rgb(43, 43, 43);
+    }
+
+    buttonBuy {
+        position: absolute;
+        right: 620px;
+        top: 350px;
+        text-align: center;
+        background: rgb(77, 253, 77);
+        display: block;
+        font-size: 30;
+        border: none;
+        height: 75px; 
+        width: 200px;
+    }
+
+    buttonSell {
+        position: absolute;
+        right: 420px;
+        text-align: center;
+        top: 350px;
+        background: rgb(219, 29, 29);
+        display: block;
+        font-size: 30;
+        border: none;
+        height: 75px; 
+        width: 200px;
+    }
+
+    watchlist {
+        position: absolute;
+        right: 20px;
+        top: 150px;
+        background-color: rgba(24, 24, 24, 0.849);
+        padding: 15px;
+        font-size: 20px;
+        Color: rgb(0, 0, 0);
+        max-width: 300px;
+    }
+
+    reddit {
+    position:absolute;
+    right:380px; 
+    top: 650px;
+    background-color: rgba(24, 24, 24, 0.849);
+    padding: 0px;
+    font-size: 20px;
+    Color: rgb(0, 0, 0);
+    }
+        
+
+    button {
+        position: absolute;
+        background: transparent;
+        display: block;
+        font-size: 0;
+        border: none;
+        height:175px; 
+        width: 300px;
+    }
+
+    personal {
+        position:absolute;
+        left: 20px;
+        top: 150px;   
+        background-color: rgba(24, 24, 24, 0.849);
+        padding: 0px;
+        font-size: 20px;
+        Color: rgb(0, 0, 0);
+
+    }
+
+    profile {
+        position: absolute;
+        left: 20px;
+        top: 650px;
+        background-color: rgba(24, 24, 24, 0.849);
+        padding: 0px;
+        font-size: 20px;
+        Color: rgb(0, 0, 0);
+    }
+
+    financials {
+        position: absolute;
+        left: 520px;
+        top: 650px;
+        background-color: rgba(24, 24, 24, 0.849);
+        padding: 0px;
+        font-size: 20px;
+        Color: rgb(0, 0, 0);
+    }
+
+
+
+
+</style>
+
+
+</head>
+
+
+<header>
+    <h1>STONKS</h1>  
+        
+</header>
+
+<h3></h3>  
+
+<!--script type="text/javascript">
+  function getParams() {
+  var idx = document.URL.indexOf('?');
+  var params = new Array();
+  if (idx != -1) {
+    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+    for (var i=0; i<pairs.length; i++) {
+      nameVal = pairs[i].split('=');
+      params[nameVal[0]] = nameVal[1];
+      }
+    }
+  return params;
+  }
+  params = getParams();
+</script>
+<script>
+
+  var para1=document.getElementById('symbol');
+    para1.value = unescape(params["symbol"]);
+    //var symbolTest = JSON.stringify(para1)
+
+
+   
+
+
+
+
+</script--> 
+
+<buttonBuy>
+    Buy
+ </buttonBuy>
+ 
+ <buttonSell>
+     Sell
+ </buttonSell>
+
+
+<script>
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var symbolTest = url.searchParams.get("symbol");
+</script>
+
+<personal>
+<div class="tradingview-widget-container">
+    <div id="tradingview_cc64e"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 1000,
+    "height": 500,
+    "symbol": symbolTest,
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "3",
+    "locale": "en",
+    "range": "1D",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "save_image": false,
+    "container_id": "tradingview_cc64e"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</personal>
+
+
+<script>
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var symbolTest = url.searchParams.get("symbol");
+    document.getElementById("symbolTest").value = symbolTest;
+</script>
+<profile>
+    <div style="width: 500px; height: 600px;"><style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: 'Trebuchet MS', Arial, sans-serif !important;
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright .blue-text {
+            color: #2196f3 !important;
+        }
+    
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright a:visited {
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #38acdb !important;
+        }
+    
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #299dcd !important;
+        }
+    
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2196f3 !important;
+        }
+        </style><iframe id = "profile" scrolling="no" allowtransparency="true" frameborder="0" style="box-sizing: border-box; height: 600px; width: 500px;"></iframe></div>
+        <script>
+            document.getElementById("profile").src =  "https://s.tradingview.com/embed-widget/symbol-profile/?locale=en&symbol="+ symbolTest + "#%7B%22width%22%3A%22500%22%2C%22height%22%3A%22600%22%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22symbol-profile%22%7D";
+        </script>
+</profile>
+<financials>
+    <div style="width: 500px; height: 600px;"><style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: 'Trebuchet MS', Arial, sans-serif !important;
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright .blue-text {
+            color: #2196f3 !important;
+        }
+    
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright a:visited {
+            color: #9db2bd !important;
+        }
+    
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #38acdb !important;
+        }
+    
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #299dcd !important;
+        }
+    
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2196f3 !important;
+        }
+        </style><iframe id = "financial" scrolling="no" allowtransparency="true" frameborder="0" style="box-sizing: border-box; height: 600px; width: 500px;"></iframe></div>
+        <script>
+            document.getElementById("financial").src =  "https://s.tradingview.com/embed-widget/financials/?locale=en#%7B%22symbol%22%3A%22"+ symbolTest + "%22%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22largeChartUrl%22%3A%22%22%2C%22displayMode%22%3A%22regular%22%2C%22width%22%3A%22500%22%2C%22height%22%3A%22600%22%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22financials%22%7D";
+        </script>
+</financials>
+
+
+
+
+   
+
+
+
+    
+
+<reddit><script src='https://redditjs.com/subreddit.js' data-subreddit='wallstreetbets' data-height='500' data-width='410' data-sort='hot' data-theme='dark'></script> </reddit>
+
+
+ <script>
+
+    symbols = ["TSLA", "GME", "ARKG", "PLTR", "EMAN"];
+
+
+</script>
+<watchlist>
+    <h2>WatchList</h2>
+    <script>
+        function getElement(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <!-- TradingView Widget BEGIN-->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        for (var i = 0; i < symbols.length; i++) {
+
+
+            document.write('<a href="WatchList.html?symbol=');
+            document.write(symbols[i]);
+            document.write('"><button></button></a>');
+
+            document.write('<span style="Color:white">');
+            document.write(symbols[i]);
+            document.write('</span>');
+            
+            new TradingView.MediumWidget(
+                {
+                    "symbols": [
+                        [
+                            symbols[i],
+                            symbols[i] + "|1D"
+                        ]
+                    ],
+
+                    "chartOnly": true,
+                    "width": "300",
+                    "height": "150",
+                    "locale": "en",
+                    "colorTheme": "dark",
+                    "gridLineColor": "#F0F3FA",
+                    "trendLineColor": "#2196F3",
+                    "fontColor": "#787B86",
+                    "underLineColor": "#E3F2FD",
+                    "isTransparent": true,
+                    "autosize": false,
+                    "container_id": "tradingview_84b45",
+                    "largeChartURL": "WatchList.html?symbol=" + symbols[i]
+                }
+            );
+        }
+    </script>
+    <!-- TradingView Widget END -->
+    </div>
+</watchlist>
+
+
+
+
+
+
+
+
+
+</html>
